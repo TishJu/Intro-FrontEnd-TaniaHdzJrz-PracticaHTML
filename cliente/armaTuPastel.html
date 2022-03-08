@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Arma tu pastel</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Estilo de header */
+        header {
+            background-color: rgb(237, 227, 241);
+            padding: 100px;
+            text-align: right;
+            font-size: 25px;
+            font-family: 'Lucida Sans Unicode';
+            color: rgb(219, 96, 203);         
+        }
+
+        /* Crear 2 columnas con la misma posición en la fila */
+        nav {
+            float: right;
+            width: 100%;
+            height: 65px;
+            /* only for demonstration, should be removed */
+            background: rgb(250, 104, 255);
+            font-family: 'Lucida Sans Unicode';
+            text-align: center;
+            padding: 25px;
+            color: white;
+        }
+
+        article {
+            float: center;
+            width: 100%;
+            height: 100%;
+            background-color: hsl(304, 100%, 92%);
+            padding: 20px;              
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            color: white;
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Estilo de footer background-color: #777; */
+        footer {
+            
+            background: rgb(250, 104, 255);
+            padding: 10px;
+            text-align: center;
+            color: white;
+            font-family: 'Lucida Sans Unicode';
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+     <div>
+        <p> 
+            <img src="https://export-download.canva.com/ftEZk/DAE6O2ftEZk/93/0/0001-20579494806.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJHKNGJLC2J7OGJ6Q%2F20220305%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220305T234513Z&X-Amz-Expires=78786&X-Amz-Signature=eff5991ca05b4e2a335919e1a357401a73e053c3a4356af402725f844018f154&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27Pasteles%2520Rosi.png&response-expires=Sun%2C%2006%20Mar%202022%2021%3A38%3A19%20GMT" width="200px" 
+             height="200px" align="left">En Pasteles Rosi, podrás elegir los sabores y decoración de tus pasteles 
+             con los costos más accesibles y deliciosos sabores.
+             contamos con una gran variedad de pasteles y postres, para el gusto de todos;
+             Nuestros postres están elaborados al día con los ingredientes más frescos y de alta calidad, sin conservadores.        </p>
+     </div>
+    </header>
+    <section >
+        <nav >
+            <ul>
+                <a href="#" target="blank">Inicio</a> |
+                <a href="#">Catálogo</a>  |
+                <a href="#">Arma tu pastel</a>    |
+                <a href="#">Materiales</a>  |   
+                <a href="#">Pedidos</a>  |         
+            </ul>
+        </nav>
+    </section>
+    <section>       
+        <article>
+            <h2>Arma tu pastel</h2>
+            <p>
+                En la siguiente sección puedes armar a tu gusto el pastel que prefieras con los sabores, adornos y 
+                decoración que más te gusten, elige las opciones que más te agraden:
+            </p>
+          <h1>Elije el sabor de tu elección: </h1>  
+           
+            <input type="radio" id="fresa" name="sabores" value="Fresa">
+            <label for="fresa">Fresa</label><br>
+            <input type="radio" id="chocolate" name="sabores" value="Chocolate">
+            <label for="chocolate">Chocolate</label><br>
+            <input type="radio" id="piña" name="sabores" value="Piña">
+            <label for="piña">Piña</label><br>
+            <input type="radio" id="cajeta" name="sabores" value="Cajeta">
+            <label for="cajeta">Cajeta</label><br>
+            <input type="radio" id="tresleches" name="sabores" value="Tresleches">
+            <label for="tresleches">Tres leches</label><br><br>
+         <hr>
+
+         <h1>Elije decoración y adornos de tu elección: </h1>  
+           
+         <table >
+            <tr>
+                <th>Decoración</th>
+                <th>Adornos</th>
+                <th>Colores de merengue</th>
+                             
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="merengue1" name="merengue1" value="flores">
+                    <label for="merengue1">Merengue en forma de flores</label><br></td>
+                <td><input type="checkbox" id="topping1" name="topping1" value="perlas">
+                    <label for="topping1">Perlas</label><br></td>
+                <td><input type="color" id="color1" name="color1"><input type="color" id="color2" name="color2"><input type="color" id="color3" name="color3"></td>
+                        
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="merengue2" name="merengue2" value="espiral">
+                    <label for="merengue2">Merengue espiral</label><br></td>
+                <td><input type="checkbox" id="topping2" name="topping2" value="flores">
+                    <label for="topping2">Flores naturales</label><br></td>
+               
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="merengue3" name="merengue3" value="liso">
+                    <label for="merengue3">Merengue liso</label><br></td>
+                <td><input type="checkbox" id="topping3" name="topping3" value="chicchoco">
+                    <label for="topping3">Chispas de chocolate</label><br></td>
+               
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="merengue4" name="merengue4" value="fondan">
+                    <label for="merengue4">Merengue fondan</label><br></td>
+                <td><input type="checkbox" id="topping4" name="topping4" value="chiscolors">
+                    <label for="topping4">Chispas de colores</label><br></td>
+                 
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="merengue5" name="merengue5" value="simple">
+                    <label for="merengue5">Merengue simple</label><br></td>
+                <td><input type="checkbox" id="topping5" name="topping5" value="hojas">
+                    <label for="topping5">Hojas decorativas comestibles</label><br></td>
+               
+            </tr>
+        </table>
+        <br>  
+        <label for="Input1"> Agrega detalles de adornos</label>
+        <br>        
+        <input type="text" id="Input1" name="Input1">
+        <br><br>
+         <hr>
+         <br><br>
+         <input type="button" id="comprar" name="comprar" value="Realizar pediddo"><br><br>
+        </article>
+        
+    </section>
+    <footer>
+        <h1>Contáctanos</h1>
+        <ul>
+            <p>Dirección<br><a>Calle marina azul #563, col.Observatorio Del. Miguel Hidalgo</a></p>
+            <p>Teléfono y correo<br><a>55470099 o al pastelesrosi@gmail.com</a></p>
+            <p>Horarios<br><a>Lu-Vi 9:00am - 6:00pm sab 10:00am - 4:00pm</a></p>
+        </ul>
+    </footer>
+</body>
+</html>

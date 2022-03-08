@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Catálogo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Estilo de header */
+        header {
+            background-color: rgb(237, 227, 241);
+            padding: 100px;
+            text-align: right;
+            font-size: 25px;
+            font-family: 'Lucida Sans Unicode';
+            color: rgb(219, 96, 203);         
+        }
+
+        /* Crear 2 columnas con la misma posición en la fila */
+        nav {
+            float: right;
+            width: 100%;
+            height: 65px;
+            /* only for demonstration, should be removed */
+            background: rgb(250, 104, 255);
+            font-family: 'Lucida Sans Unicode';
+            text-align: center;
+            padding: 25px;
+            color: white;
+        }
+
+        article {
+            float: center;
+            width: 100%;
+            height: 100%;
+            background-color: hsl(304, 100%, 92%);
+            padding: 20px;              
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            color: white;
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Estilo de footer background-color: #777; */
+        footer {
+            
+            background: rgb(250, 104, 255);
+            padding: 10px;
+            text-align: center;
+            color: white;
+            font-family: 'Lucida Sans Unicode';
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+     <div>
+        <p> 
+            <img src="https://export-download.canva.com/ftEZk/DAE6O2ftEZk/93/0/0001-20579494806.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJHKNGJLC2J7OGJ6Q%2F20220305%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220305T234513Z&X-Amz-Expires=78786&X-Amz-Signature=eff5991ca05b4e2a335919e1a357401a73e053c3a4356af402725f844018f154&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27Pasteles%2520Rosi.png&response-expires=Sun%2C%2006%20Mar%202022%2021%3A38%3A19%20GMT" width="200px" 
+             height="200px" align="left">En Pasteles Rosi, podrás elegir los sabores y decoración de tus pasteles 
+             con los costos más accesibles y deliciosos sabores.
+             contamos con una gran variedad de pasteles y postres, para el gusto de todos;
+             Nuestros postres están elaborados al día con los ingredientes más frescos y de alta calidad, sin conservadores.        </p>
+     </div>
+    </header>
+    <section >
+        <nav >
+            <ul>
+                <a href="#" target="blank">Inicio</a> |
+                <a href="#">Catálogo</a>  |
+                <a href="#">Arma tu pastel</a>    |
+                <a href="#">Materiales</a>  |   
+                <a href="#">Pedidos</a>  |         
+            </ul>
+        </nav>
+    </section>
+    <section>       
+        <article>
+            <h2>Catálogo</h2>
+        <hr>   
+            <table >
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Seleccionar</th>  
+                    <th>Cantidad</th>            
+                </tr>
+                <tr>
+                    <td>1.-ChocoFresa...</td>
+                    <td>10 personas</td>
+                    <td>.....250</td> 
+                    <td><input type="checkbox" id="pastel1" name="pastel1" value="pastel1"></td>   
+                    <td><input type="text" id="text" name="text"><br><br></td>       
+                </tr>
+                <tr>
+                    <td>2.-Piña colada...</td>
+                    <td>10 personas</td>
+                    <td>.....150</td> 
+                    <td><input type="checkbox" id="pastel2" name="pastel2" value="pastel2"></td>
+                    <td><input type="text" id="text" name="text"><br><br></td>    
+                </tr>
+                <tr>
+                    <td>3.-Limón...</td>
+                    <td>15 personas</td>
+                    <td>.....150</td> 
+                    <td><input type="checkbox" id="pastel3" name="pastel3" value="pastel3"></td>
+                    <td><input type="text" id="text" name="text"><br><br></td>    
+                </tr>
+                <tr>
+                    <td>4.-Tres leches...</td>
+                    <td>15 personas</td>
+                    <td>.....150</td> 
+                    <td><input type="checkbox" id="pastel4" name="pastel4" value="pastel4"></td>
+                    <td><input type="text" id="text" name="text"><br><br></td>    
+                </tr>
+                <tr>
+                    <td>5.-Cajeta...</td>
+                    <td>15 personas</td>
+                    <td>.....150</td> 
+                    <td><input type="checkbox" id="pastel5" name="pastel5" value="pastel5"></td>
+                    <td><input type="text" id="text" name="text"><br><br></td>    
+                </tr>
+            </table>
+            <br><br>
+            
+          
+          <hr>
+          <input type="button" id="comprar" name="comprar" value="Realizar pediddo"><br><br>
+         
+        </article>
+        
+    </section>
+    <footer>
+        <h1>Contáctanos</h1>
+        <ul>
+            <p>Dirección<br><a>Calle marina azul #563, col.Observatorio Del. Miguel Hidalgo</a></p>
+            <p>Teléfono y correo<br><a>55470099 o al pastelesrosi@gmail.com</a></p>
+            <p>Horarios<br><a>Lu-Vi 9:00am - 6:00pm sab 10:00am - 4:00pm</a></p>
+        </ul>
+    </footer>
+</body>
+</html>
